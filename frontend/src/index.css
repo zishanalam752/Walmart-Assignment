@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Color Palette */
+:root {
+  --fk-blue: #2874f0;
+  --fk-light-blue: #e0f2fe;
+  --fk-dark-blue: #1a4f90;
+  --fk-orange: #ff9f00;
+  --fk-red: #ff0000;
+  --fk-green: #388e3c;
+  --fk-gray: #f0f0f0;
+  --fk-dark-gray: #757575;
+  --fk-text-color: #212121;
+  --fk-light-text: #878787;
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--fk-text-color);
+  background-color: var(--fk-gray);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: var(--fk-blue);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--fk-dark-blue);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--fk-gray);
+  color: var(--fk-text-color);
+}
+
+/* Remove default styling for h1 and button */
+h1,
+button {
+  all: unset;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+    --fk-text-color: #f0f0f0;
+    --fk-light-text: #a0a0a0;
+    --fk-gray: #333333;
+    --fk-dark-gray: #cccccc;
+  }
+  body {
+    background-color: #242424;
+    color: rgba(255, 255, 255, 0.87);
+  }
+  a:hover {
+    color: var(--fk-light-blue);
+  }
+}
